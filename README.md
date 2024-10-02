@@ -1,6 +1,6 @@
 # DrWU AI Customer Service Chatbot
 
-![DrWU AI Assistant](demo/DrWU.mp4)
+![DrWU AI Assistant]
 
 ## Table of Contents
 
@@ -54,21 +54,17 @@ The chatbot's architecture is designed to handle user interactions efficiently b
 
 ```bash
 drwu
-├── .gitignore
 ├── config.py
 ├── create_data.py
+├── main.py
+├── requirements.txt
 ├── Dockerfile
+├── LICENSE.txt
+├── README.md
 ├── db
 │   ├── products.db
 │   ├── product_details.db
 │   └── product_vertex.db
-├── del__pycache__.py
-├── demo
-│   └── DrWU.mp4
-├── etc
-│   └── secrets
-│       ├── google_adc.json
-│       └── google_api.json
 ├── langchain_utils
 │   ├── main.py
 │   ├── step_1.py
@@ -78,16 +74,11 @@ drwu
 │   ├── step_5.py
 │   ├── step_6.py
 │   └── __init__.py
-├── LICENSE.txt
-├── main.py
-├── README.md
-├── requirements.txt
 ├── static
 │   ├── chat.js
 │   └── styles.css
 ├── templates
 │   └── chat.html
-├── test.py
 ├── utils
 │   ├── product_details.py
 │   ├── product_vertex.py
