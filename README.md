@@ -1,6 +1,6 @@
 # DrWU AI Customer Service Chatbot
 
-![DrWU AI Assistant](demo/DrWU.mp4)
+![DrWU AI Assistant]
 
 ## Table of Contents
 
