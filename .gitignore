@@ -1,0 +1,7 @@
+.venv/
+.devcontainer/
+.note/
+etc/secrets/
+del__pycache__.py
+config.py
+test.py

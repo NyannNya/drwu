@@ -1,0 +1,169 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Base styles for the floating dialog */
+#floatDiv {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Minimized state styles */
+#floatDiv.minimized {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4A90E2; /* Header color */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide elements when minimized */
+#floatDiv.minimized #header {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#floatDiv.minimized #header span,
+#floatDiv.minimized #toggleButton {
+    display: none;
+}
+
+#floatDiv.minimized #displayArea,
+#floatDiv.minimized #inputContainer {
+    display: none;
+}
+
+/* Header styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s ease;
+    cursor: pointer; /* Make the header clickable */
+}
+
+/* Toggle button styles */
+#toggleButton {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+/* Display area styles */
+#displayArea {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+/* Input container styles */
+#inputContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Input box styles */
+#inputBox {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 10px;
+}
+
+/* Send and clear button styles */
+#sendButton,
+#clearButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sendButton {
+    background-color: #4A90E2;
+    margin-left: 5px;
+}
+
+#sendButton:hover {
+    background-color: #3A80D2;
+}
+
+#clearButton {
+    background-color: #ff4d4f;
+}
+
+#clearButton:hover {
+    background-color: #ff7875;
+}
+
+/* Message bubble styles */
+.message-container {
+    display: flex;
+    margin: 10px 0;
+}
+
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .message-bubble {
+    background-color: #DCF8C6;
+    color: #000;
+}
+
+.system-message {
+    justify-content: flex-start;
+}
+
+.system-message .message-bubble {
+    background-color: #F1F0F0;
+    color: #000;
+}
